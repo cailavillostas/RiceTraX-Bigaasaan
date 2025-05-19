@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #c6e3a8;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.logout {
+  margin-top: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  border: 4px solid green;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status.green {
+  background: green;
+}
+
+.status.yellow {
+  background: orange;
+}
+
+.status.red {
+  background: red;
+}
+
+.low-stock {
+  border-color: orange;
+}
+
+.out-stock {
+  border-color: red;
+}
+
+/* Legend */
+.legend {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot.green {
+  background: green;
+}
+
+.dot.yellow {
+  background: orange;
+}
+
+.dot.red {
+  background: red;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #388e3c;
+}
